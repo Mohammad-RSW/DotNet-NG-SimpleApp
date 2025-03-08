@@ -1,0 +1,55 @@
+@Web_HostAddress = http://localhost:5235
+
+### Get All Users
+GET http://localhost:5235/api/user/all
+Accept: application/json
+
+### Get User By Id
+GET http://localhost:5235/api/user/
+Content-Type: application/json
+
+### Get All Profiles
+GET http://localhost:5235/api/user/profiles
+Accept: application/json
+
+### Get Profile By Id
+GET http://localhost:5235/api/user/profile
+Content-Type: application/json
+
+### Get Profile By Username
+GET http://localhost:5235/api/user/Admin
+Content-Type: application/json
+
+### Register User
+POST http://localhost:5235/api/user/register
+Content-Type: application/json
+{
+  "UserName": "NewUser3",
+  "Email": "NewUser3@example.com",
+  "Password": "12345678Aa",
+  "ConfirmPassword": "12345678Aa",
+  "FullName": "New User",
+  "Avatar": ""
+}
+
+### Edit User
+PUT http://localhost:5235/api/user/edit
+Content-Type: application/json
+{
+  "UserName": "edited",
+  "Email": "edited@example.com",
+  "FullName": "edited",
+  "Avatar": ""
+}
+
+### Delete User
+DELETE http://localhost:5235/api/user/delete
+Content-Type: application/json
+
+### Login User
+POST http://localhost:5235/api/user/login
+Content-Type: application/json
+{
+  "UserName": "NewUser3",
+  "Password": "12345678Aa"
+}
